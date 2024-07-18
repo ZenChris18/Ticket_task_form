@@ -1,0 +1,490 @@
+/* BODY CSS *//* BODY CSS *//* BODY CSS */
+
+@import url('httpsL//fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Ubuntu', sans-serif;
+}
+
+:root{/*COLORS*/
+  --blue: #008EC2;
+  --red: #D23426;
+  --orange: #F38D1F;
+  --green: #84C148;
+  --gray: #e0e0e0;
+  --white: #ffffff;
+  --black: #000000;
+  --sidecolor: #FAFAFA;
+}
+
+body{
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+
+/* SIDEBAR CSS*//* DO NOT EDIT *//* SIDEBAR CSS*//* DO NOT EDIT *//* SIDEBAR CSS*//* DO NOT EDIT */
+
+.container{
+  position: relative;
+  width: 100%;
+}
+
+.navigation{
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background: var(--blue);
+  border-left: 10px solid var(--blue);
+  transition:0.5s;
+  overflow: hidden;
+}
+
+.navigation.active{
+  width: 80px;
+}
+
+.navigation ul li.active {
+  background-color: var(--white); /* Background color for active item */
+}
+
+.navigation ul li.active a .icon ion-icon {
+  color: var(--blue); /* Color for icon in active item */
+}
+
+.navigation ul li.active a .title {
+  color: var(--blue); /* Color for title in active item */
+  font-weight: 700;
+}
+
+.navigation ul li.active a .logo,
+.navigation ul li.active a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 70px;
+  text-align: center;
+}
+
+.navigation ul li.active a .logo img {
+  width: 40px;
+  height: 20px;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+.navigation ul li:active a::before, .navigation ul li.active a::before{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 35px 35px 0 10px var(--white);
+  pointer-events: none;
+}
+
+.navigation ul li:active a::after,.navigation ul li.active a::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 35px -35px 0 10px var(--white);
+  pointer-events: none;
+}
+
+.navigation ul li a .logo, .navigation ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 70px;
+  text-align: center;
+}
+
+.navigation ul li a .logo img {
+  width: 40px;
+  height: 20px;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+.navigation ul{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navigation ul li{
+  position: relative;
+  list-style: none;
+  width: 100%; 
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.navigation ul li:hover, .navigation ul li.hovered{
+  background: var(--white);
+}
+
+.navigation ul li:nth-child(1){
+  margin-bottom: 40px;
+  pointer-events: none;
+  font-weight: 700;
+}
+
+.navigation ul li a{
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: var(--white);
+}
+
+.navigation ul li:hover a, .navigation ul li.hovered a{
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.navigation ul li a .icon{
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 70px;
+  text-align: center;
+}
+
+.navigation ul li a .icon ion-icon{
+  font-size:  1.75em;
+}
+
+.navigation ul li a .title{
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+}
+
+.navigation ul li:hover a::before, .navigation ul li.hovered a::before{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 35px 35px 0 10px var(--white);
+  pointer-events: none;
+}
+
+.navigation ul li:hover a::after,.navigation ul li.hovered a::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 35px -35px 0 10px var(--white);
+  pointer-events: none;
+}
+
+
+/* MAIN PANEL CSS *//* MAIN PANEL CSS *//* MAIN PANEL CSS */
+
+.main{
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 300px;
+  min-height: 100vh;
+  background: var(--white);
+  transition: 0.5s;
+}
+
+.main.active{
+  width: calc(100% - 80px);
+  left: 80px;
+}
+
+/*TOPBAR CONTAINER*/
+.topbar{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  
+}
+
+/*MENU BURGER*/
+.toggle{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
+  cursor: pointer;
+}
+
+/*SEARCH CONTAINER*/
+.search{
+  position:relative;
+  width: 300px;
+  right: 1%;
+}
+
+.search label{
+  position: relative;
+  width: 100%;
+}
+
+.search label input{
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  padding: 5px 40px;
+  outline: none;
+  border: 1px solid #7c7c7c;
+}
+
+.search label ion-icon{
+  position: absolute;
+  top: 0;
+  left: 10px;
+  font-size: 1.2em;
+}
+
+/* PROFILE CONTAINER */
+.content { 
+  flex-grow: 1;
+}
+
+.Profilepic { /*PROFILE PIC*/
+  width: 80px;
+  height: 80px; 
+  border-radius: 50px;
+  position: absolute;
+  top: 75px;
+  left: 44px;
+}
+
+.ProfileName { /*NAME*/
+  position: absolute;
+  color: black;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: left;
+  top: 85px;
+  left: 150px;
+}
+
+.ProfileEmp { /*POSITION*/
+  position: absolute;
+  color: black;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: left;
+  top: 118px;
+  left: 150px;
+}
+
+.ProfileDropdown { /*DROPDOWN*/
+  position: absolute;
+  top: 140px; 
+  left: 250px; 
+  background-color: var(--sidecolor);
+  color: black;
+  font-size:small;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 5px;
+  height: 35px;
+  width: 20%;
+  cursor: pointer;
+}
+
+.Status { /*STATUS*/
+  position: absolute;
+  top: 140px; 
+  left: 150px; 
+  background-color: var(--orange);
+  color: black;
+  font-size:small;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 5px;
+
+}
+
+
+
+/*PANEL BELOW PROFILE*/
+.bigBox{
+  position:relative;
+  width: 100%;
+  padding: 20px;
+  display:flex;
+  margin-top: 100px;
+  height: 500%;
+}
+
+.bigBox .box{
+  position:relative;
+  display:flex;
+  width: 100%;
+  background: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  height: 500%;
+  position: relative;
+}
+
+.box{
+  position: relative;
+  flex-direction: column;
+}
+
+/*MAIN MENU*/
+.MainMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+  background: var(--sidecolor);
+  margin-right: 20px;
+  width: 250px;
+  box-sizing: border-box;
+}
+
+.MainMenu .tab-content {
+  display: none;
+}
+
+.MainMenu button {/*MENU BUTTON*/
+  background-color: var(--blue);
+  color: var(--white);
+  border: none;
+  padding: 10px;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 130%;
+  box-sizing: border-box;
+}
+
+.MainMenu button.active-tab {/*MENU BUTTON WHEN ACTIVE*/
+  background-color: var(--green);
+  color: var(--black);
+  font-weight: bold;
+}
+
+.MainMenu button:hover {/*MENU BUTTON WHEN HOVERED*/
+  background-color: var(--green);
+}
+
+.MainMenu p{
+  font-size: small;
+  margin-top: 20px;
+}
+
+.MainMenu .notes textarea{
+  margin-top: 10px;
+  height: 250px;
+  width: 300px;
+  
+}
+
+
+/*MENU CONTENTS*/
+
+.info { /*INFO CONTAINER*/
+  background-color: #ffffff;
+  margin: 10px;
+  position: absolute;
+  flex-grow: 90;
+  padding: 20px;
+  box-shadow: 0 7px 25px #acacac;
+  border-radius: 10px;
+  width: calc(100% - 350px); 
+  left: 350px; 
+}
+
+.info .icon {/*EDIT PENCIL ICON*/
+  position: absolute;
+  top: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.info button {/*SAVE CHANGES BUTTON*/
+  background-color: var(--blue);
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  width: 120px;
+  cursor: pointer;
+  color: var(--white);
+  margin-top: 20px;
+}
+
+.info .input-container {/*INPUT WHOLE CONTAINER*/
+  display:block;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  
+}
+
+.info .input-field {/*INPUT PER SECTION*/
+  display: flex;
+  align-items: center;
+  margin: 10px 20px;
+}
+
+.info .input-field input {/*INPUT BOX*/
+  font-size: small;
+  height: 25px;
+  width: 30%;
+}
+
+.info .input-field select {/*DROPDOWN*/
+  font-size: small;
+  height: 25px;
+  width: 30%;
+}
+
+.info .input-field p {/*LABEL*/
+  margin-right: 20px;
+  font-size: 15px;
+  width: 200px;
+  
+}
+.emergency-header {/*H3*/
+  font-size: small;
+  font-style: italic;
+  font-weight: 100;
+  margin-left: 20px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}

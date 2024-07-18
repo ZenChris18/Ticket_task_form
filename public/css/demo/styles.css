@@ -1,0 +1,119 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+span{
+  color: red;
+}
+
+#searchInput{
+  width: 30%;
+  padding: 5 10 10 5;
+}
+
+.search-bar{
+  padding-bottom: 45px;
+}
+
+
+h1, p{
+  text-align: center;
+  color: white;
+}
+
+h1{
+  font-family: 'Courier New', Courier, monospace;
+}
+
+p{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#survey-form {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: tomato;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#survey-form div{
+  margin-top: 15px;
+}
+
+label{
+  color: white;
+  font-family: sans-serif;
+  margin: 2px 0 0 0;
+}
+
+#name{
+  width: 30rem;
+  height: 2em;
+  font-size: 13px;
+  border-radius: 5px;
+}
+
+span{
+  color: red;
+  font-family: sans-serif;
+}
+
+#email, #days, #number, #dropdown{
+  width: 96.1rem;
+  height: 2em;
+  font-size: 13px;
+  border-radius: 5px;
+}
+
+.hidden{
+  display: none;
+}
+
+#dropdown-CS, #dropdown-Management, #dropdown-DS{
+  width: 96.1rem;
+  height: 2em;
+  font-size: 13px;
+  border-radius: 5px;
+}
+
+input{
+  margin-top: 4px;
+}
+
+hr{
+  margin-top: 20px;
+}
+
+input[type="radio"]{
+  display: inline-block;
+  margin: 8px 3px 0 0;
+}
+
+textarea{
+  width: 96.1rem;
+  height: 5em;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+#submit{
+  background-color: #89CFF0;
+  color: #7100E3;
+  width: 10em;
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#submit:hover{
+  background-color: #04AA6D;
+  color: white;
+}

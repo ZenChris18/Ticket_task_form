@@ -1,0 +1,919 @@
+@import url('httpsL//fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Ubuntu', sans-serif;
+
+}
+
+:root{
+  --blue: #008EC2;
+  --red: #D23426;
+  --orange: #F38D1F;
+  --green: #84C148;
+  --gray: #e0e0e0;
+  --white: #ffffff;
+  --black: #000000;
+  --sidecolor: #FAFAFA;
+}
+
+
+
+.navigation ul li.active {
+  background-color: var(--white); /* Background color for active item */
+  
+  
+}
+
+.navigation ul li.active a .icon ion-icon {
+  color: var(--blue); /* Color for icon in active item */
+}
+
+.navigation ul li.active a .title {
+  color: var(--blue); /* Color for title in active item */
+  font-weight: 700;
+}
+
+.navigation ul li.active a .logo,
+.navigation ul li.active a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 70px;
+  text-align: center;
+}
+
+.navigation ul li.active a .logo img {
+  width: 40px;
+  height: 20px;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+.navigation ul li:active a::before, .navigation ul li.active a::before{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 35px 35px 0 10px var(--white);
+  pointer-events: none;
+}
+
+.navigation ul li:active a::after,.navigation ul li.active a::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 35px -35px 0 10px var(--white);
+  pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+.navigation ul li a .logo, .navigation ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 70px;
+  text-align: center;
+}
+
+.navigation ul li a .logo img {
+  width: 40px;
+  height: 20px;
+  object-fit: cover;
+  margin-top: 20px;
+}
+body{
+  min-height: 100vh;
+  overflow-x: hidden;
+
+}
+
+.container{
+  position: relative;
+  width: 100%;
+}
+
+.navigation{
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background: var(--blue);
+  border-left: 10px solid var(--blue);
+  transition:0.5s;
+  overflow: hidden;
+}
+
+.navigation.active{
+  width: 80px;
+}
+
+.navigation ul{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+}
+
+.navigation ul li{
+  position: relative;
+  list-style: none;
+  width: 100%; 
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  
+}
+
+.navigation ul li:hover, .navigation ul li.hovered{
+  background: var(--white);
+}
+
+.navigation ul li:nth-child(1){
+  margin-bottom: 40px;
+  pointer-events: none;
+  font-weight: 700;
+
+}
+
+.navigation ul li a{
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: var(--white);
+}
+
+.navigation ul li:hover a, .navigation ul li.hovered a{
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.navigation ul li a .icon{
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 70px;
+  text-align: center;
+}
+
+.navigation ul li a .icon ion-icon{
+  font-size:  1.75em;
+}
+
+.navigation ul li a .title{
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+
+}
+
+.navigation ul li:hover a::before, .navigation ul li.hovered a::before{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 35px 35px 0 10px var(--white);
+  pointer-events: none;
+}
+
+.navigation ul li:hover a::after,.navigation ul li.hovered a::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 35px -35px 0 10px var(--white);
+  pointer-events: none;
+}
+
+
+/* Main */
+
+.main{
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 300px;
+  min-height: 100vh;
+  background: var(--white);
+  transition: 0.5s;
+}
+
+.main.active{
+  width: calc(100% - 80px);
+  left: 80px;
+}
+.topbar{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  
+}
+
+.toggle{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
+  cursor: pointer;
+}
+
+.search{
+  position: relative;
+  width: 400px;
+  margin: 0 10px;
+}
+
+.search label{
+  position: relative;
+  width: 100%;
+}
+
+.search label input{
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  padding: 5px 40px;
+  outline: none;
+  border: 1px solid #7c7c7c;
+}
+
+.search label ion-icon{
+  position: absolute;
+  top: 0;
+  left: 10px;
+  font-size: 1.2em;
+}
+
+.user{
+  position: relative;
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.user img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+.tabContainer {
+  display: flex;
+}
+
+.tab {
+  background: var(--white);
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 5px 5px 0 0;
+}
+
+.tab h2 {
+  margin: 0;
+}
+
+.bigBox{
+  position:relative;
+  width: 100%;
+  padding: 20px;
+  display:flex;
+  margin-top: 150px;     /* THIS WILL ALLOW THE BIG BOX TO MOVE DOWNWARDS */
+  height: 200%;
+}
+
+.bigBox .box{
+  position:relative;
+  display:flex;
+  width: 112%;
+
+  background: var(--white);
+  padding: 20px;
+  box-shadow: 0 7px 25px #acacac;
+  border-radius: 10px;
+  height: 200%;
+}
+.box{
+flex-direction: column;
+}
+
+.boxHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+}
+
+.boxHeader h2{
+  font-weight: 600;
+  color: var(--black);
+}
+
+.bigBox table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+
+}
+
+.bigBox table thead td{
+  font-weight: 600;
+}
+
+.bigBox .box table tr{
+  color: var(--black);
+  border-bottom: 1px solid #a5a5a5;
+ 
+}
+
+.bigBox .box table tr td {
+  padding: 10px 0; /* Adjust the padding as needed */
+}
+
+
+
+.bigBox .box table tr:hover{
+  background: var(--blue);
+  color: var(--white);
+}
+
+
+
+/* TAB BUTTON FOR PROFILE PAGE */
+.tab-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: -45px;
+    left: 0px;
+  }
+  
+  .tab-buttons button {
+    padding: 10px 20px;
+    background: white;
+    border: 1px #858585 solid;
+    box-shadow: 0 1px 3px black;
+    border-radius: 3px;
+    text-align: center;
+    color: black;
+    font-size: 14px;
+    font-family: Inter;
+    font-weight: 400;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .tab-buttons button:hover {
+    background-color: #008EC2;
+    color: white;
+  }
+  
+  /* Style for Active Tab */
+  .tab-content {
+    display: none;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  
+
+
+/* PROFILE PICTURE */
+.content {
+  flex-grow: 1;
+}
+.Profilepic{
+  width: 65px; /* Specify a fixed width */
+  height: 65px; /* Allow height to adjust proportionally */
+  border-radius:50px;
+  position: absolute;
+  top:75px;
+  left:44px;
+}
+.ProfileName{
+    position:absolute;
+  color: black;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: left;
+  top: 85px;
+  left: 127px;
+}
+.ProfileEmp{
+    position:absolute;
+  color: black;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: left;
+  top: 118px;
+  left: 128px;
+}
+
+
+
+
+/* CREATE */
+.createTicket1-button {
+    position: absolute;
+    width: 183px;
+    height: 39px;
+    top: 46px;
+    left: 0px;
+  }
+  
+  .createTicket1 a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #008EC2;
+    border-radius: 0px;
+    text-align: center;
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 5;
+  }
+  
+  .createTicket1 a:hover {
+    background-color: white;
+  }
+
+  .createTicket2-button {
+    position: absolute;
+    width: 183px;
+    height: 39px;
+    top: 0px;
+    left: 0px;
+}
+
+.createTicket2-button a {
+    display: inline-block;
+    padding: 10px;
+    background: #008EC2;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 5;
+}
+
+.createTicket2-button a:hover {
+    background-color: var(--green);
+}
+
+.task-container {
+  position: relative; /* Change to relative to allow positioning of children */
+  width: auto;
+  height:600px;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  color: #636363; /* Light grey */
+  display: flex;
+  align-items: center; /* Vertically align items */
+
+}
+  
+  
+.savetl-button {
+    position: absolute;
+   
+    top: 360px;
+    left: 560px;
+}
+
+.savetl a {
+    display: inline-block;
+    padding: 8px 14px;
+    background: #008EC2;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.savetl a:hover {
+    background-color: var(--green);
+}
+
+.editTickettl-button {
+    position: absolute;
+    
+    top: 360px;
+    left: 480px;
+}
+
+.editTickettl a {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #008EC2;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.editTickettl a:hover {
+    background-color: var(--green);
+}
+
+  
+  
+  
+  
+  
+  
+  
+  /* CREATE NEW TASK BUTTON */  
+  .createTicket2 {
+    position: absolute;
+    width: 200%;
+    top: 50px;
+    left: 10px;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    color: black; /* Light grey */
+  }
+  
+  .cretic1 {
+    width: 410px; /* Adjust as needed */
+    display: inline-block;
+    text-align: left;
+    margin-right: -90px; /* Adjust space between text and dropdown */
+  }
+  
+  .cre1 {
+    display: inline-block;
+    text-align: left;
+    color: black;
+    vertical-align: top; /* Aligns dropdown with text */
+  }
+  
+  .cre1 select {
+    width: 80%; /* Adjust width as needed */
+    padding: 5px;
+    border: 1px solid #858585;
+    border-radius: 3px;
+    font-family: Roboto;
+    font-size: 14px;
+  }
+  
+  .taskteam1 {
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-start; /* Align items to the start of the container */
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    color: black; 
+    margin: 40px 0; 
+    position: absolute;
+    top: 60px;
+    left: 10px;
+}
+
+.labe3 {
+    flex: 0 0 auto; 
+    margin-right: 276px; /* Adjust as needed */
+    white-space: nowrap;
+}
+
+.valu3 {
+    flex: 1; 
+    color: black;
+    border: 1px solid #ccc; 
+    padding: 3px; 
+    border-radius: 4px; 
+    font-size: 14px; 
+    font-family: Roboto, sans-serif; 
+    width: 198px; 
+}
+  
+  
+  /* CREATE TICKETSSSSSSSS */
+  .viewtask {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    position:absolute;
+    top: 140px;
+    left: 10px;
+    color: black;
+  }
+  
+  .vtask6 {
+    margin-right: 252px;
+    white-space: nowrap;
+  }
+  
+  .texttask6 {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+  }
+  
+  .file-upload-input {
+    display: none;
+  }
+  
+  .file-upload-label {
+    background-color: #858585;
+    color: white;
+    padding: 6px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .file-upload-label:hover {
+    background-color: #727a84ea;
+  }
+  
+  .ticDes {
+    width: 50%;
+    position: absolute;
+    top: 220px;
+    left: 10px;
+    font-family: Roboto;
+    font-size: 14px;
+    color: black;
+}
+
+.tdes1 {
+    display: block; /* Change to block */
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+#ticketDescription {
+    width: 670px;
+    padding: 10px;
+    font-family: Roboto;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: none; /* Prevent resizing */
+}
+
+.ticDes2 {
+  width: 50%;
+  position: absolute;
+  top: 260px;
+  left: 20px;
+  font-family: Roboto;
+  font-size: 14px;
+  color: black;
+}
+
+.tdes2 {
+  display: block; /* Change to block */
+  text-align: left;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+#ticketDescription2 {
+  width: 530px;
+  padding: 10px;
+  font-family: Roboto;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: none; /* Prevent resizing */
+}
+
+  
+
+
+
+
+  /* VIEW TICKETSSSSSSSSSS */
+.dtime {
+    width: 50%;
+    position:absolute;
+    top:50px;
+    left:20px;
+    font-family: Roboto;
+    font-size: 14px;
+    color: #636363; /* Light grey */
+  }
+  .dtime1 {
+    width: 350px; /* Adjust as needed */
+    display: inline-block;
+    text-align: left;
+  }
+  .time1 {
+   display:inline-block;
+    text-align: right;
+    color: black;   
+  }
+  .ticketnum {
+    width: 50%;
+    position:absolute;
+    top:100px;
+    left:20px;
+    font-family: Roboto;
+    font-size: 14px;
+    color: #636363; /* Light grey */
+  }
+  .ticketnum1 {
+    width: 350px; /* Adjust as needed */
+    display: inline-block;
+    text-align: left;
+  }
+  .num1 {
+   display:inline-block;
+    text-align: right;
+    color: black; 
+  }
+  .status {
+    width: 50%;
+    position:absolute;
+    top:150px;
+    left:20px;
+    font-family: Roboto;
+    font-size: 14px;
+    color: #636363; /* Light grey */
+  }
+  .status1 {
+    width: 352px; /* Adjust as needed */
+    display: inline-block;
+    text-align: left;
+  }
+  .st1 {
+   display:inline-block;
+    text-align: right;
+    color: black; 
+  }
+  
+  .subject {
+    width: 75%;
+    position:absolute;
+    top:200px;
+    left:20px;
+    font-family: Roboto;
+    font-size: 14px;
+    color: #636363; /* Light grey */
+  }
+  .sub1 {
+    width: 350px; /* Adjust as needed */
+    display: inline-block;
+    text-align: left;
+  }
+  .s1 {
+   display:inline-block;
+    text-align: right;
+    color: black; 
+  }
+  
+  
+  
+  
+  
+  
+  /* Styles for the file upload box */
+  .file-upload {
+    position: absolute;
+    top: 150px; /* Adjust as needed */
+    left: 650px; /* Adjust as needed */
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    color: #636363; /* Light grey */
+  
+  }
+  
+  .file-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 500px; /* Adjust as needed */
+    text-align: right;
+  
+  }
+  
+  .file-input {
+    display: block;
+    width: 100%;
+    padding: 180px;
+    border: 1px solid #858585;
+    border-radius: 3px;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+  
+  }
+  
+  
+  .tcreated {
+    width: 50%;
+    position:absolute;
+    top:50px;
+    left:900px;
+    font-family: Roboto;
+    font-size: 14px;
+    color: #636363; /* Light grey */
+  }
+  .create2 {
+    width: 100px; /* Adjust as needed */
+    display: inline-block;
+    text-align: left;
+  }
+  .c2 {
+   display:inline-block;
+    text-align: right;
+    color: black;   
+  }
+  .tmodified {
+    width: 50%;
+    position:absolute;
+    top:100px;
+    left:900px;
+    font-family: Roboto;
+    font-size: 14px;
+    color: #636363; /* Light grey */
+  }
+  .modify2 {
+    width: 100px; /* Adjust as needed */
+    display: inline-block;
+    text-align: left;
+  }
+  .m2 {
+   display:inline-block;
+    text-align: right;
+    color: black; 
+  }
+  
+
+  .active-tab {
+    color: green; /* Change this to your desired active tab style */
+  }
+  
+  .button .active-tab {
+    background-color: var(--green);
+    color: var(--black);
+    font-weight: bold;
+  }
+  
+  /* Add this to your CSS */
+  .button button.active {
+    background-color: var(--green);
+    color: black;
+  }
