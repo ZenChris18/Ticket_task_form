@@ -41,7 +41,7 @@
 
           <!--TASK TAB-->
           <li>
-            <a href="/Emp_DTR">
+            <a href="{{ route('Emp_Tasks') }}">
               <span class="icon"><ion-icon name="ticket-sharp"></ion-icon></span>
               <span class="title">Tasks</span>
             </a>
@@ -49,7 +49,7 @@
 
           <!--TICKETS TAB-->
           <li>
-            <a href="/Emp_DTR">
+            <a href="{{ route('Emp_Tickets') }}">
               <span class="icon"><ion-icon name="person-add-sharp"></ion-icon></span>
               <span class="title">Tickets</span>
             </a>
@@ -57,7 +57,7 @@
 
           <!--LOGOUT TAB-->
           <li>
-            <a href="/Emp_DTR">
+            <a href="{{ route('LoginPage') }}">
               <span class="icon"><ion-icon name="log-out-sharp"></ion-icon></span>
               <span class="title">Logout</span>
             </a>

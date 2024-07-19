@@ -15,6 +15,19 @@ class FormController extends Controller
     {
         return view('Emp_DTR'); // Ensure 'Emp_DTR' matches 'Emp_DTR.blade.php'
     }
+    public function showTasksForm()
+    {
+        return view('Emp_Tasks'); 
+    }
+    public function showTicketsForm()
+    {
+        return view('Emp_Tickets'); 
+    }
+
+    public function showLoginForm()
+    {
+        return view('LoginPage'); 
+    }
 
     // Method to handle form submission
     public function submitForm(Request $request)

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="Tickets.css">
-  <link rel="icon" type="image/png" href="img/favicon.png"> <!--LOGO FAVICON-->
+  <link rel="stylesheet" href="{{ asset('css/Tickets.css') }}">
+  <link rel="icon" type="image/png" href="{{ asset('img/favicon.png') }}"> <!--LOGO FAVICON-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <title>EMPLOYEE TICKETS</title>
 </head>
@@ -20,31 +20,31 @@
           </a>
         </li>
         <li>
-          <a href="Profile.html">
+          <a href="{{ route('show.form') }}">
             <span class="icon"><ion-icon name="person-circle-sharp"></ion-icon></span>
             <span class="title">Profile</span>
           </a>
         </li>
         <li>
-          <a href="Emp_DTR.html">
+          <a href="{{ route('Emp_DTR') }}">
             <span class="icon"><ion-icon name="people-sharp"></ion-icon></span>
             <span class="title">Attendance</span>
           </a>
         </li>
         <li>
-          <a href="Emp_Tasks.html">
+          <a href="{{ route('Emp_Tasks') }}">
             <span class="icon"><ion-icon name="ticket-sharp"></ion-icon></span>
             <span class="title">Tasks</span>
           </a>
         </li>
         <li class="active">
-          <a href="Emp_Tickets.html">
+          <a href="{{ route('Emp_Tickets') }}">
             <span class="icon"><ion-icon name="person-add-sharp"></ion-icon></span>
             <span class="title">Tickets</span>
           </a>
         </li>
         <li>
-          <a href="LoginPage.html">
+          <a href="{{ route('LoginPage') }}">
             <span class="icon"><ion-icon name="log-out-sharp"></ion-icon></span>
             <span class="title">Logout</span>
           </a>
@@ -73,7 +73,7 @@
       <div class="ProfileName">Rachel Marie R. Quingco</div>
       <div class="ProfileEmp">Team Member</div>
       <div class="content">
-         <img class="Profilepic" src="Profilepic.JPG" />
+        <img class="Profilepic" src="{{ asset('img/ProfilePic.png') }}" />
       </div>
     </div>
     
