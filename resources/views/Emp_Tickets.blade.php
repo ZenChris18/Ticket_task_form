@@ -204,7 +204,7 @@
 
                   <div class="savetl-button">
                     <div class="savetl">
-                        <a href="Emp_Tickets.html">Save Changes</a>
+                      <a href="{{ route('Emp_Tickets') }}">Save Changes</a>
                     </div>
                  </div>
 

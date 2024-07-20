@@ -9,4 +9,6 @@ Route::get('Attendance', [FormController::class, 'showEmp_DTRForm'])->name('Emp_
 Route::get('Tasks', [FormController::class,'showTasksForm'])->name('Emp_Tasks');
 Route::get('Tickets', [FormController::class, 'showTicketsForm'])->name('Emp_Tickets');
 Route::get('Login', [FormController::class, 'showLoginForm'::class])->name('LoginPage');
+Route::get('Leave', [FormController::class,'showLeaveForm'])->name("Emp_Leave");
+Route::get('Hours', [FormController::class,'showHoursForm'])->name('Emp_Hours');
 //add other routes for other

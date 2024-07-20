@@ -90,9 +90,9 @@
         <div class="boxHeader">
           <div class="button a">
             <div class="dtr-button">
-              <a href="Emp_DTR.html">Daily Track Record</a>
-              <a href="Emp_Leave.html">Leave</a>
-              <a href="Emp_Hours.html">Hours Notification</a>
+              <a href="{{ route('Emp_DTR') }}">Daily Track Record</a>
+              <a href="{{ route('Emp_Leave') }}">Leave</a>
+              <a href="{{ route('Emp_Hours') }}">Hours Notification</a>
             </div>
 
             <div class="amIn-button">

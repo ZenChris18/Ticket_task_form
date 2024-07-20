@@ -22,7 +22,7 @@
                     <i class="fas fa-lock"></i>
                     <input type="password" placeholder="Password">
                 </div>
-                <a href="ManageEmployees.html" class="btn">Login</a>
+                <a href="{{ route('show.form') }}" class="btn">Login</a>
 
                 <p class="social-text">Or Sign in with social platform</p>
                 <div class="social-media">

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="Attendance.css">
+  <link rel="stylesheet" href="{{ asset('css/Attendance.css') }}">
   <link rel="icon" type="image/png" href="img/favicon.png"> <!--LOGO FAVICON-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <title>EMPLOYEE ATTENDANCE</title>
@@ -21,25 +21,25 @@
           </li>
           
           <li>
-            <a href="Profile.html">
+            <a href="{{ route('show.form') }}">
               <span class="icon"><ion-icon name="person-circle-sharp"></ion-icon></span>
               <span class="title">Profile</span>
             </a>
           </li>
           <li class="active">
-            <a href="Emp_DTR.html">
+            <a href="{{ route('Emp_DTR') }}">
               <span class="icon"><ion-icon name="people-sharp"></ion-icon></span>
               <span class="title">Attendance</span>
             </a>
           </li>
           <li>
-            <a href="Emp_Tasks.html">
+            <a href="{{ route('Emp_Tasks') }}">
               <span class="icon"><ion-icon name="ticket-sharp"></ion-icon></span>
               <span class="title">Tasks</span>
             </a>
           </li>
           <li>
-            <a href="Emp_Tickets.html">
+            <a href="{{ route('Emp_Tickets') }}">
               <span class="icon"><ion-icon name="person-add-sharp"></ion-icon></span>
               <span class="title">Tickets</span>
             </a>
@@ -47,7 +47,7 @@
           
           
           <li>
-            <a href="LoginPage.html">
+            <a href="{{ route('LoginPage') }}">
               <span class="icon"><ion-icon name="log-out-sharp"></ion-icon></span>
               <span class="title">Logout</span>
             </a>
@@ -76,7 +76,7 @@
       <div class="ProfileName">Rachel Marie R. Quingco</div>
       <div class="ProfileEmp">Team Member</div>
       <div class="content">
-         <img class="Profilepic" src="Profilepic.JPG" />
+          <img class="Profilepic" src="{{ asset('img/ProfilePic.png') }}" />
   
       </div>
       <!-- Other tabs -->
@@ -91,9 +91,9 @@
         <div class="boxHeader">
           <div class="button a">
             <div class="dtr-button">
-              <a href="Emp_DTR.html">Daily Track Record</a>
-              <a href="Emp_Leave.html">Leave</a>
-              <a href="Emp_Hours.html">Hours Notification</a>
+              <a href="{{ route('Emp_DTR') }}">>Daily Track Record</a>
+              <a href="{{ route('Emp_Leave') }}">Leave</a>
+              <a href="{{ route('Emp_Hours') }}">Hours Notification</a>
             </div>
           </div>
         </div>

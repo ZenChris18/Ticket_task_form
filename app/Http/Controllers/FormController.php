@@ -28,6 +28,15 @@ class FormController extends Controller
     {
         return view('LoginPage'); 
     }
+    public function showLeaveForm()
+    {
+        return view('Emp_Leave'); 
+    }
+    public function showHoursForm()
+    {
+        return view('Emp_Hours'); 
+    }
+
 
     // Method to handle form submission
     public function submitForm(Request $request)
