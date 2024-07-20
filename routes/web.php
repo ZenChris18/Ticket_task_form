@@ -8,7 +8,7 @@ Route::post('/submit-form', [FormController::class, 'submitForm'])->name('submit
 Route::get('Attendance', [FormController::class, 'showEmp_DTRForm'])->name('Emp_DTR');
 Route::get('Tasks', [FormController::class,'showTasksForm'])->name('Emp_Tasks');
 Route::get('Tickets', [FormController::class, 'showTicketsForm'])->name('Emp_Tickets');
-Route::get('Login', [FormController::class, 'showLoginForm'::class])->name('LoginPage');
+Route::get('Login', [FormController::class, 'showLoginForm'])->name('LoginPage');
 Route::get('Leave', [FormController::class,'showLeaveForm'])->name("Emp_Leave");
 Route::get('Hours', [FormController::class,'showHoursForm'])->name('Emp_Hours');
 //add other routes for other
