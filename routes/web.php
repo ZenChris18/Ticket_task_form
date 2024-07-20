@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\TaskController;
+
+Route::post('/tasks', [TaskController::class, 'store'])->name('tasks.store');
+
 
 Route::get('/', [FormController::class, 'showProfileForm'])->name('show.form');
 Route::post('/submit-form', [FormController::class, 'submitForm'])->name('submit.form');

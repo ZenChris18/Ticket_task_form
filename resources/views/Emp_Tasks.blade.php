@@ -170,47 +170,44 @@
             </div>
 
 
-            <!-- TL CREATE TASK (TL CREATE TASK BUTTON)-->
-            <div id="createTask-button" class="tab-content">
-              <div class="task-container">
-                  <div class="taskdate">
-                      <span class="label1">Date:</span>
-                      <input type="text" class="value1" placeholder="Enter Date" required>
-                  </div>
-                  <div class="taskname1">
-                      <span class="label2">Project / Task Name:</span>
-                      <input type="text" class="value2" placeholder="Enter Project Title" required>
-                  </div>
-                  <div class="taskteam">
-                      <span class="label3">Team:</span>
-                      <input type="text" class="value3" placeholder="Enter Team" required>
-                  </div>
-                  <div class="viewtask">
-                    <label for="fileUpload" class="vtask6">File Upload</label>
-                    <div class="texttask6">
-                        <input type="file" id="fileUpload" name="fileUpload" class="file-upload-input">
-                        <label for="fileUpload" class="file-upload-label">Choose File</label>
-                    </div>
-                </div>
-                
-                
-                
-                  <div class="ticDes">
-                      <span class="tdes1">Task Description</span>
-                      <textarea id="ticketDescription" rows="4" cols="50" placeholder="Enter task description here..."></textarea>
-                  </div>
-                  <div class="savetl2-button">
-                      <div class="button a savetl2">
-                        <a href="{{ route('Emp_Tasks') }}">Save Changes</a>
-                      </div>
-                  </div>
-                  <div class="editTask-button">
-                      <div class="button a editTask">
-                          <a href="">Edit</a>
-                      </div>
-                  </div>
+
+<form action="{{ route('tasks.store') }}" method="POST" enctype="multipart/form-data">
+    @csrf
+    <!-- TL CREATE TASK (TL CREATE TASK BUTTON)-->
+    <div id="createTask-button" class="tab-content">
+        <div class="task-container">
+            <div class="taskdate">
+                <span class="label1">Date:</span>
+                <input type="date" class="value1" name="date" placeholder="Enter Date" required>
+            </div>
+            <div class="taskname1">
+                <span class="label2">Project / Task Name:</span>
+                <input type="text" class="value2" name="project_name" placeholder="Enter Project Title" required>
+            </div>
+            <div class="taskteam">
+                <span class="label3">Team:</span>
+                <input type="text" class="value3" name="team" placeholder="Enter Team" required>
+            </div>
+            <div class="viewtask">
+              <label for="fileUpload" class="vtask6">File Upload</label>
+              <div class="texttask6">
+                  <input type="file" id="fileUpload" name="fileUpload" class="file-upload-input">
+                  <label for="fileUpload" class="file-upload-label">Choose File</label>
               </div>
-          </div>
+            </div>
+            <div class="ticDes">
+                <span class="tdes1">Task Description</span>
+                <textarea id="ticketDescription" name="task_description" rows="4" cols="50" placeholder="Enter task description here..."></textarea>
+            </div>
+            <div class="savetl2-button">
+                <div class="button a savetl2">
+                    <button type="submit">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
           
 
 

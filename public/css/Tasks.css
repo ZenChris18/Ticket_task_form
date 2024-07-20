@@ -541,7 +541,7 @@ flex-direction: column;
     left: 470px;
 }
 
-.savetl2 a {
+.savetl2 button {
     display: inline-block;
     padding: 8px 14px;
     background: #008EC2;
@@ -554,7 +554,7 @@ flex-direction: column;
     cursor: pointer;
 }
 
-.savetl2 a:hover {
+.savetl2 button:hover {
     background-color: var(--green);
 }
 
