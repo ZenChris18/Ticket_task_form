@@ -201,7 +201,7 @@
                   </div>
                   <div class="savetl2-button">
                       <div class="button a savetl2">
-                          <a href="Emp_Tasks.html">Save Changes</a>
+                        <a href="{{ route('Emp_Tasks') }}">Save Changes</a>
                       </div>
                   </div>
                   <div class="editTask-button">
